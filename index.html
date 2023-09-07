@@ -11,7 +11,7 @@
     <title>Add To Cart - JS🛒</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" style="max-width: 95vw!important;">
         <div class="row" style="height: 20vh;">
             <figure class="text-center">
                 <blockquote class="blockquote">
@@ -60,10 +60,39 @@
                 <div class="card-body">
                     <h5>Titulo</h5>
                     <p>Precio</p>
-                    <button class="btn btn-dark" type="button">Buy</button>
+                    <button tyle="width: 100%;"class="btn btn-dark" type="button">Buy</button>
                 </div>
             </div>
         </div>
+    </template>
+
+    <!-- Template para el item de comprado -->
+    <template id="template-carrito">
+        <tr>
+            <th scope="row">id</th>
+            <td>Producto</td>
+            <td>1</td>
+            <td style="text-align: center;">
+                <button class="btn btn-warning btn-sm">
+                    +
+                </button>
+                |
+                <button class="btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td>
+                $ <span>500</span>
+            </td>
+        </tr>
+    </template>
+
+    <!-- template para el footer -->
+    <template id="template-footer">
+        <th colspan="2" scope="row">Total Productos</th>
+        <td>10</td>
+        <td><button id="vaciar" class="btn btn-danger btn-sm" style="width: 100%;" >Vaciar carrito</button></td>
+        <tb class="font-weigth-bold">$ <span>500</span></tb>
     </template>
     <script src="./js/app.js"></script>
 </body>
